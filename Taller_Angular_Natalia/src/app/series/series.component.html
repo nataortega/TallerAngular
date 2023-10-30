@@ -1,0 +1,23 @@
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Channel</th>
+        <th>Seasons</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let serie of series">
+        <td>{{serie.id}}</td>
+        <td>
+          <button id="{{serie.id}}" class="btn default" (click)="onClick($event)">{{serie.name}}</button>
+        </td>
+        <td>{{serie.channel}}</td>
+        <td>{{serie.seasons}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Seasons average: {{avgSeasons}}</p>
+
